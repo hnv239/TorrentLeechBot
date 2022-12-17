@@ -193,7 +193,7 @@ async def call_apropriate_function(
     is_file,
     user_message,
     client,
-    credit,
+    # credit,
 ):
     if not is_file:
         if incoming_link.lower().startswith("magnet:"):
