@@ -78,7 +78,7 @@ async def incoming_message_f(client, message):
                         ]
                     ),
                 )
-                await credit.delete()
+                # await credit.delete()
                 return
             is_file = True
             dl_url = rep_mess
@@ -103,7 +103,7 @@ async def incoming_message_f(client, message):
                 ]
             ),
         )
-        await credit.delete()
+        # await credit.delete()
         return
     if dl_url is not None:
         current_user_id = message.from_user.id
@@ -152,13 +152,13 @@ async def incoming_message_f(client, message):
             is_file,
             message,
             client,
-            credit,
+            # credit,
         )
         if not sagtus:
             # if FAILED, display the error message
             await i_m_sefg.edit_text(err_message)
             try:
-                await credit.delete()
+                # await credit.delete()
             except:
                 pass
     else:
