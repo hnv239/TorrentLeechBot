@@ -44,9 +44,9 @@ async def incoming_message_f(client, message):
     """/leech command or /gleech command"""
     user_command = message.command[0]
     g_id = message.from_user.id
-    credit = await message.reply_text(
-        f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", {parse_mode: 'HTML'}
-    )
+    #credit = await message.reply_text(
+    #    f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html"
+    #)
     # get link from the incoming message
     i_m_sefg = await message.reply_text("processing...", quote=True)
     rep_mess = message.reply_to_message
@@ -169,10 +169,10 @@ async def incoming_message_f(client, message):
                 [[InlineKeyboardButton("Help", callback_data="help_msg_2_only")]]
             ),
         )
-        try:
-            await credit.delete()
-        except:
-            pass
+        #try:
+        #    await credit.delete()
+        #except:
+            #pass
     # await credit.edit_text(f"🧲 Leeched successfully <a href='tg://user?id={g_id}'>👍</a>", parse_mode="html")
 
 
